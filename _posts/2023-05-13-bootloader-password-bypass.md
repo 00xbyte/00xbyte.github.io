@@ -50,7 +50,7 @@ Now, with addresses correctly mapped, I can use cross-references to strings in o
 
 Now all that is left is to figure out what the password is.
 
-![]({{ 'assets/img/post/cli_password.png' | relative_url }})
+![]({{ 'assets/img/post/cfe_password.png' | relative_url }})
 
 As you can see, the password is calculated using the last 3 bytes of the MAC address in reverse order.
 I entered the password into the CFE prompt and success! I can now flash my own firmware.
