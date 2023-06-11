@@ -1,8 +1,11 @@
 ---
 title: Bypassing Router Bootloader Protection
-date: 2023-05-21
-categories: [Reverse Engineering]
-tags: [IoT, Bootloader]
+date: '2023-05-21'
+categories:
+- Reverse Engineering
+tags:
+- IoT
+- Bootloader
 ---
 
 There is a saying that you don't truly own a router until you flash your own firmware on it.
@@ -14,7 +17,7 @@ So I accepted the challenge :)
 
 Opening up the router, I found 4 pins that I assumed were debug pins.
 
-image 1
+![image 1]({{ 'assets/img/post/uart.jpg' | relative_url }}){: width="540" height="400" }
 
 Using a multimeter I identified which was ground, TX, and RX. I connected a UART-to-USB connector to my computer, used my favorite serial com tool - screen, booted up the router and there was the boot log!
 
@@ -22,10 +25,12 @@ Using a multimeter I identified which was ground, TX, and RX. I connected a UART
 
 Upon boot, I quickly pressed some keys in order to stop the boot process before the OS was loaded, and was prompted with the CFE prompt.
 The only problem was that the bootloader was password protected, and did not let me enter any command. Any input I entered, resulted in the same message:
+
 ```
 please enter the password!
 CFE> 
 ```
+{: file='/dev/ttyUSB0'}
 
 Assuming my ISP probably customized the bootloader, and knowing fair well that they most likely didn't do a very good job, I decided to try to find the password.
 
@@ -35,21 +40,21 @@ After opening the bootloader in IDA, my first task was to find the image load ad
 I noticed that many function use pointers with a similar base address (`0xFxxxxx`)
 
 
-image 2
+![]({{ 'assets/img/post/address.png' | relative_url }})
 
 My immediate guess was an image base address of `0xF00000`. After fiddling around to find the exact address it turned out  to be `0xF00000 - 12` (for some reason).
 
 Now, with addresses correctly mapped, I can use cross-references to strings in order to navigate inside the boot loader. A quick search brought me to the function that validates the password.
 
-image 3
+![]({{ 'assets/img/post/cfe_prompt.png' | relative_url }})
 
 Now all that is left is to figure out what the password is.
 
-image 4
+![]({{ 'assets/img/post/cli_password.png' | relative_url }})
 
 As you can see, the password is calculated using the last 3 bytes of the MAC address in reverse order.
 I entered the password into the CFE prompt and success! I can now flash my own firmware.
 
-image 5
+![image 5]({{ 'assets/img/post/cfe_uart.png' | relative_url }})
 
 That's it! I hope you enjoyed our short journey.
