@@ -1,6 +1,5 @@
 ---
 title: Bypassing Router Bootloader Protection
-date: '2023-05-21'
 categories:
 - Reverse Engineering
 tags:
