@@ -8,7 +8,7 @@ tags:
 ---
 
 There is a saying that you don't truly own a router until you flash your own firmware on it.
-The only problem was that the bootloader was password protected.
+The only problem was that the bootloader of my router was password protected.
 So I accepted the challenge :) 
 
 > Disclaimer - My ISP is the biggest one in Israel, and this is their newest router.

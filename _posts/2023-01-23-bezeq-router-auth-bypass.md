@@ -9,7 +9,7 @@ tags:
 ---
 
 # Intro
-I want to share with you a cute little vulnerability I found (CVE-ID pending).
+I want to share with you a cute little vulnerability I found.
 Two models of Bezeq's routers, Vtech NB603-IL and Vtech IAD604-IL are vulnerable to authentication bypass.
 # The vulnerability
 These routers use their serial number as a password to the admin panel on port 80/443. 
