@@ -1,7 +1,7 @@
 ---
-title: LG Soundbar Remote DOS
+title: LG Soundbar DOS
 categories:
-- BlackBox
+- Reverse Engineering
 tags:
 - Memory-Corruption
 - DOS
