@@ -4,4 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Security researcher based in Tel Aviv.
+Security researcher based in Tel Aviv
