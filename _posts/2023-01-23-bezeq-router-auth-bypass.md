@@ -6,7 +6,7 @@ tags:
 - IoT
 - Auth-Bypass
 - Info-Leak
-image: assets/img/post/router_login.jpeg
+image: /assets/img/post/router_login.jpeg
 ---
 
 # Intro

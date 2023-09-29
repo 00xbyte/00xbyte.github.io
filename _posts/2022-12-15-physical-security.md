@@ -3,7 +3,7 @@ title: Physical Security
 categories:
 - Real World
 tags: []
-image: assets/img/post/keypad.jpeg
+image: /assets/img/post/keypad.jpeg
 ---
 
 # Intro
