@@ -5,6 +5,7 @@ categories:
 tags:
 - IoT
 - Bootloader
+image: assets/img/post/uart.jpg
 ---
 
 There is a saying that you don't truly own a router until you flash your own firmware on it.
