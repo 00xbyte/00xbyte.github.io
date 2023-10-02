@@ -109,7 +109,7 @@ assets:
     env: # [development|production]
 
 pwa:
-  enabled: false # the option for PWA feature
+  enabled: # the option for PWA feature
 
 paginate: 10
 
