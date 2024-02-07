@@ -2,8 +2,6 @@
 
 source "https://rubygems.org"
 
-# gem 'rackup'
-
 gem "jekyll-theme-chirpy", "~> 6.0", ">= 6.4.2"
 
 group :test do
@@ -29,6 +27,6 @@ if RUBY_PLATFORM =~ /linux-musl/
   gem "jekyll-sass-converter", "~> 2.0"
 end
 
-gem 'jekyll-redirect-from'
+gem 'jekyll-redirect-from', group: :jekyll_plugins
 
 gem 'jekyll-admin', group: :jekyll_plugins
