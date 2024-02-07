@@ -2,10 +2,10 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 6.0", ">= 6.0.1"
+gem "jekyll-theme-chirpy", "~> 6.0", ">= 6.4.2"
 
 group :test do
-  gem "html-proofer", "~> 3.18"
+  gem "html-proofer", "~> 4.4"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -28,5 +28,6 @@ if RUBY_PLATFORM =~ /linux-musl/
 end
 
 gem 'jekyll-redirect-from'
+
 
 gem 'jekyll-admin', group: :jekyll_plugins
