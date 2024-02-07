@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem 'rackup'
+# gem 'rackup'
 
 gem "jekyll-theme-chirpy", "~> 6.0", ">= 6.4.2"
 
