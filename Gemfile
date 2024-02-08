@@ -29,6 +29,4 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 #   gem "jekyll-sass-converter", "~> 2.0"
 # end
 
-gem 'jekyll-redirect-from', group: :jekyll_plugins
-
 gem 'jekyll-admin', group: :jekyll_plugins
