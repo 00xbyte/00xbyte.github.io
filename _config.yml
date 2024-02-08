@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
   A blog showcasing broken security mechanisms and vulnerabilities ranging from IoT bootloader protection all the way to physical pen-testing
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://00xbyte.github.io"
+url: "https://www.00xbyte.com"
 
 github:
   username: 00xbyte # change to your github username
@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Zuki (Itay Zukerman)
-  email: zuki.itay@gmail.com # change to your email address
+  email: zuki@00xbyte.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://www.linkedin.com/in/itay-zuki
