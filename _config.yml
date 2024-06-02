@@ -20,7 +20,7 @@ timezone:
 
 title: Security Is Broken # the main title
 
-tagline: by Zuki # it will display as the sub-title
+tagline: 00xbtye # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog showcasing broken security mechanisms and vulnerabilities ranging from IoT bootloader protection all the way to physical pen-testing
@@ -38,8 +38,7 @@ social:
   email: zuki@00xbyte.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://www.linkedin.com/in/itay-zuki
-    - https://www.instagram.com/itay_zuki
+    - javascript:location.href = 'mailto:' + ['zuki','00xbyte.com'].join('@')
 
 
 google_site_verification: # fill in to your verification string
@@ -76,7 +75,7 @@ theme_mode: dark
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: 'assets/img/profile.jpg'
+avatar: 'assets/img/icon.png'
 
 # boolean type, the global switch for TOC in posts.
 toc: true
