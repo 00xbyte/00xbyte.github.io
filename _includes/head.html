@@ -114,4 +114,26 @@
 
   {% include metadata-hook.html %}
 
+  <!-- Sender-newsletter-popup -->
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er;
+    s[er] = s[er] || function () {
+      (s[er].q = s[er].q || []).push(arguments)
+    }, s[er].l = 1 * new Date();
+    var a = e.createElement(n),
+        m = e.getElementsByTagName(n)[0];
+    a.async = 1;
+    a.src = d;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('282a3b8c1b4801')
+</script>
+<!-- Remove branding -->
+<script>
+  function hideSpecificImage() {var iframe = document.querySelector('iframe');if (!iframe) {return;} var innerDoc = iframe.contentDocument || iframe.contentWindow.document;if (!innerDoc) {return;}var images = innerDoc.getElementsByTagName('img');for (var i = 0; i < images.length; i++) {if (images[i].src.endsWith('sender-brand.png')) {images[i].style.display = 'none';}}}  function periodicallyCheckAndHideImage() {hideSpecificImage();setInterval(hideSpecificImage, 500);}  window.onload = function() {periodicallyCheckAndHideImage();};
+</script>
+</body>
+</script>
+
 </head>
