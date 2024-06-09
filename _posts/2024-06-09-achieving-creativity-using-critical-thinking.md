@@ -49,8 +49,8 @@ Wrapping that thought, my steps for creative thinking are
 
 # Creative Problem Solving - Example
 
-Now, let's try to apply these steps for creative problem-solving rather than creative inventing.
-Let's say we work on behalf of Domino's Pizza, and our task in hand is to make Elon Musk talk about our pizza in his interview for SNL. We want to save the company money, so we are looking for a cheaper solution than paying for a sponsor.
+Now, let's try to apply these steps for creative problem-solving rather than creative inventing.  
+Let's say we work on behalf of Domino's Pizza, and our task at hand is to make Elon Musk talk about our pizza in his interview for SNL. We want to save the company money, so we are looking for a cheaper solution than paying for a sponsor.
 
 First, we define the task - Elon Musk needs to voluntarily mention Domino's Pizza in the interview.
 Next, we list all of our assumptions:
@@ -58,7 +58,7 @@ Next, we list all of our assumptions:
 - He does not think about Domino's Pizza often
 - He probably hasn't tasted our pizza in a long time
 
-Lastly, let's break out assumptions:
+Lastly, let's break our assumptions:
 - Incentivize him to talk about our pizza by creating a funny memory for him that he would want to share
 - Make him encounter our pizzas
 - Give him multiple chances to taste our pizza
@@ -69,4 +69,4 @@ Place a pizza on his doorstep every morning of the week prior to the interview, 
 ![]({{ 'assets/img/post/pizza_tesla.jpg' | relative_url }}){: width="540" height="400" }
 
 
-So next time you are looking for new vectors or edge cases in your research, stop "being creative" and start thinking critically.
+So next time you are looking for new vectors or edge cases in your research, stop "being creative" and start thinking critically :)
