@@ -52,7 +52,7 @@ Wrapping that thought, my steps for creative thinking are
 Now, let's try to apply these steps for creative problem-solving rather than creative inventing.  
 Let's say we work on behalf of Domino's Pizza, and our task at hand is to make Elon Musk talk about our pizza in his interview for SNL. We want to save the company money, so we are looking for a cheaper solution than paying for a sponsor.
 
-First, we define the task - Elon Musk needs to voluntarily mention Domino's Pizza in the interview.
+First, we define the task - Elon Musk needs to voluntarily mention Domino's Pizza in the interview.  
 Next, we list all of our assumptions:
 - The only way to incentivize him to talk about us is by paying him.
 - He does not think about Domino's Pizza often
