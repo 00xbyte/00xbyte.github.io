@@ -20,7 +20,7 @@ timezone:
 
 title: Security Is Broken # the main title
 
-tagline: 00xbtye # it will display as the sub-title
+tagline: 00xbyte # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog showcasing broken security mechanisms and vulnerabilities ranging from IoT bootloader protection all the way to physical pen-testing
