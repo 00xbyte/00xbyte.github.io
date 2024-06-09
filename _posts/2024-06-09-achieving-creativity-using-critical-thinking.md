@@ -21,7 +21,7 @@ I'll attempt to make my point with a thought experiment.
 Imagine you were given the task to invent a new shape. What would come to mind?  
 The first thing that popped into my head was two straight lines forming an L shape, whose ends are connected by a squiggly line.
 
-![]({{ 'assets/img/post/shape.jpg' | relative_url }}){: width="540" height="400" }
+![]({{ 'assets/img/post/Shape.jpg' | relative_url }}){: width="540" height="400" }
 
 You may argue whether my shape is creative or not, but let's compare it to what we come up with using critical thinking.
 
