@@ -1,0 +1,73 @@
+<!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">{{ site.data.locales[include.lang].post.share }}</span>
+  <span class="share-icons">
+    {% capture title %}{{ page.title }} - {{ site.title }}{% endcapture %}
+    {% assign title = title | uri_escape %}
+    {% assign url = page.url | absolute_url | url_encode %}
+
+    {% for share in site.data.share.platforms -%}
+      {%- capture tooltip -%}
+        data-bs-toggle="tooltip" data-bs-placement="top" title="{{ share.type }}" aria-label="{{ share.type }}"
+      {%- endcapture -%}
+
+      {% if share.type == 'Mastodon' %}
+        <script defer type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/share-to-mastodon/+esm"></script>
+        <button class="btn text-start" {{ tooltip }}>
+          <share-to-mastodon
+            class="share-mastodon"
+            message="{{ title }}"
+            url="{{ url }}"
+            {%- if share.instances -%}
+              customInstanceList="{{ share.instances | jsonify | xml_escape }}"
+            {%- endif %}
+          >
+            <i class="fa-fw {{ share.icon }}"></i>
+          </share-to-mastodon>
+        </button>
+
+        {% continue %}
+      {% endif %}
+
+      {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
+
+      <a href="{{ link }}" target="_blank" rel="noopener" {{ tooltip }}>
+        <i class="fa-fw {{ share.icon }}"></i>
+      </a>
+    {% endfor %}
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="{{ site.data.locales[include.lang].post.button.share_link.title }}"
+      data-title-succeed="{{ site.data.locales[include.lang].post.button.share_link.succeed }}"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
+  <style>
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }       
+    .button-container button, .button-container a {
+        padding: 4px 8px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+    }
+  </style>
+  <div class="button-container">
+      <a id="subscribe-button"><i class="fa-solid fa-envelope"></i><span style="margin-left: 0.5em;">Subscribe</span></a>
+      <a href="javascript:location.href = 'mailto:' + ['zuki','00xbyte.com'].join('@')"><i class="fa-solid fa-file-invoice"></i><span style="margin-left: 0.5em;">Post with us</span></a>
+  </div>
+</div>
