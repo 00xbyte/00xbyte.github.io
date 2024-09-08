@@ -20,7 +20,7 @@ timezone:
 
 title: Security Is Broken # the main title
 
-tagline: 00xbyte # it will display as the sub-title
+tagline: and will never be fixed # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog showcasing broken security mechanisms and vulnerabilities ranging from IoT bootloader protection all the way to physical pen-testing
@@ -34,11 +34,11 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Zuki (Itay Zukerman)
+  name: zuki
   email: zuki@00xbyte.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - javascript:location.href = 'mailto:' + ['zuki','00xbyte.com'].join('@')
+    - mailto:zuki@00xbyte.com
 
 
 google_site_verification: # fill in to your verification string
@@ -131,6 +131,10 @@ collections:
     output: true
     sort_by: order
 
+  authors:
+    output: true
+    permalink: authors/:title/
+
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project
@@ -160,6 +164,11 @@ defaults:
       path: assets/js/dist
     values:
       swcache: true
+  - scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
 
 sass:
   style: compressed
@@ -185,7 +194,7 @@ exclude:
   - package*.json
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [categories, tag]
   layouts:
     category: category
     tag: tag

@@ -4,6 +4,8 @@ categories:
 - Real World
 tags: []
 image: /assets/img/post/keypad.jpeg
+authors:
+- 00xbyte
 ---
 
 # Intro

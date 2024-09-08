@@ -5,6 +5,8 @@ categories:
 tags:
 - Tips
 image: /assets/img/post/pizza_tesla.jpg
+authors:
+- 00xbyte
 ---
 
 As security researchers, we are often required to think creatively in order to think of edge cases and find vulnerabilities. Creativity is commonly referred to as the attribute of 'non-systematical' thinking, 'non-analytical' thinking, or in other words - thinking outside the box. So much so that creative thinking is many times perceived as the complete opposite of critical thinking.  

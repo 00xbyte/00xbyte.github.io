@@ -5,6 +5,8 @@ categories:
 tags:
 - Memory-Corruption
 - DOS
+authors:
+- 00xbyte
 ---
 
 I have found a memory corruption that causes DOS in some of LG's soundbars.

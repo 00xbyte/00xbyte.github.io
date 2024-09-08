@@ -7,6 +7,8 @@ tags:
 - Auth-Bypass
 - RCE
 - Backdoor
+authors:
+- 00xbyte
 ---
 
 # Intro
