@@ -1,7 +1,7 @@
 ---
 title: Bezeq Router Auth-Bypass
 categories:
-- Reverse Engineering
+- Research
 tags:
 - IoT
 - Auth-Bypass

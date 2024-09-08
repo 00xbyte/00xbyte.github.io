@@ -1,7 +1,7 @@
 ---
 title: Bypassing Router Bootloader Protection
 categories:
-- Reverse Engineering
+- Research
 tags:
 - IoT
 - Bootloader
