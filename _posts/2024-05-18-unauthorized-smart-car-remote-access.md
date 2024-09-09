@@ -9,13 +9,15 @@ tags:
 - Car
 - Camera
 image: /assets/img/post/proof_logo.jpeg
+authors:
+- 00xbyte
 ---
 
 # Intro
 As the entire world races torwards connectivity, time-to-market is often prioritized over security.  
 In today's episode - finding vulnerabilities in smart car appliences!
 
-> Improper authorization may lead to unauthorized access to smart car appliences (dash cams, car infotainment  systems), granting access to location history, videos and more.
+> Improper authorization may lead to unauthorized access to smart car appliences (dash cams, car infotainment systems), granting access to location history, videos and more.
 
 ## Affected Vendors:
 - Szime
