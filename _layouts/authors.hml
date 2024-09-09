@@ -1,0 +1,50 @@
+---
+layout: norefactor
+---
+
+{% include lang.html %}
+<h1>Authors</h1>
+
+
+<style>
+  .author-card {
+    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.2s ease-in-out; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+    margin: 0.5em;
+    cursor: pointer;
+  }
+
+  .author-card:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
+  }
+</style>
+
+<div id="author-list" style="display: inline">
+  <div style="display: flex;flex-direction: row;align-items: stretch;flex-wrap: wrap;background: none;">
+    {% for author in site.authors %}
+      <a id="{{ author.username }}" href="{{ site.baseurl }}/authors/{{ author.username | slugify | url_encode }}">
+        <div class="author-card">
+            <img src='https://github.com/{{ author.github_username }}.png?size=150' width="150" height="150" alt="{{ author.username }} profile picture" style="border-radius: 20%; object-fit: cover;" />
+            <div style="color: var(--text-color)">
+              {{ author.username}}
+            </div>
+            <div>
+              {% assign number_of_posts = 0 %}
+              {% for post in site.posts %}
+                  {% if post.authors contains author.username or author.username == post.authors %}
+                      {% assign number_of_posts = number_of_posts | plus: 1 %}
+                  {% endif %}
+              {% endfor %}
+              {% if number_of_posts == 0 %}No posts{% elsif number_of_posts == 1 %}1 post{% else %}{{ number_of_posts }} posts{% endif %}
+            </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>  
+</div>
+<!-- #author-list -->

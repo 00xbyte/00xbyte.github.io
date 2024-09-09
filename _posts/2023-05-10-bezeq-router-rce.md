@@ -1,12 +1,14 @@
 ---
 title: Bezeq Router RCE
 categories:
-- Reverse Engineering
+- Research
 tags:
 - IoT
 - Auth-Bypass
 - RCE
 - Backdoor
+authors:
+- 00xbyte
 ---
 
 # Intro

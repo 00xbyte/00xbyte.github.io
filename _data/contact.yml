@@ -4,6 +4,3 @@
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
-- type: linkedin
-  icon: 'fab fa-linkedin'                         # icons powered by <https://fontawesome.com/>
-  url:  'https://www.linkedin.com/in/itay-zuki/'  # Fill with your Linkedin homepage

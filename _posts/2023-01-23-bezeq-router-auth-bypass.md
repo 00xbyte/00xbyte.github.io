@@ -1,12 +1,14 @@
 ---
 title: Bezeq Router Auth-Bypass
 categories:
-- Reverse Engineering
+- Research
 tags:
 - IoT
 - Auth-Bypass
 - Info-Leak
 image: /assets/img/post/router_login.jpeg
+authors:
+- 00xbyte
 ---
 
 # Intro

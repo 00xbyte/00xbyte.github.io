@@ -52,26 +52,17 @@ tail_includes:
       <div class="d-flex justify-content-between">
         <!-- author(s) -->
         <span>
-          {% if page.author %}
-            {% assign authors = page.author %}
-          {% elsif page.authors %}
-            {% assign authors = page.authors %}
-          {% endif %}
+
+          {% assign authors = site.authors | where_exp: "author", "page.authors contains author.username" %}
 
           {{ site.data.locales[lang].post.written_by }}
 
           <em>
             {% if authors %}
               {% for author in authors %}
-                {% if site.data.authors[author].url -%}
-                  <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-                {%- else -%}
-                  {{ site.data.authors[author].name }}
-                {%- endif %}
+                  <a href="{{ author.url }}">{{ author.username }}</a>
                 {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
               {% endfor %}
-            {% else %}
-              <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
             {% endif %}
           </em>
         </span>
@@ -139,8 +130,8 @@ tail_includes:
         {% endif %}
       </div>
 
-      {% include post-sharing.html lang=lang %}
     </div>
+    {% include post-sharing.html lang=lang %}   
     <!-- .post-tail-bottom -->
   </div>
   <!-- div.post-tail-wrapper -->

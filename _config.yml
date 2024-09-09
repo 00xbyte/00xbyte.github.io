@@ -20,7 +20,7 @@ timezone:
 
 title: Security Is Broken # the main title
 
-tagline: by Zuki # it will display as the sub-title
+tagline: and will never be fixed # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog showcasing broken security mechanisms and vulnerabilities ranging from IoT bootloader protection all the way to physical pen-testing
@@ -34,12 +34,11 @@ github:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Zuki (Itay Zukerman)
+  name: zuki
   email: zuki@00xbyte.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://www.linkedin.com/in/itay-zuki
-    - https://www.instagram.com/itay_zuki
+    - mailto:zuki@00xbyte.com
 
 
 google_site_verification: # fill in to your verification string
@@ -76,7 +75,7 @@ theme_mode: dark
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: 'assets/img/profile.jpg'
+avatar: 'assets/img/icon.png'
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -132,6 +131,10 @@ collections:
     output: true
     sort_by: order
 
+  authors:
+    output: true
+    permalink: authors/:title/
+
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project
@@ -161,6 +164,11 @@ defaults:
       path: assets/js/dist
     values:
       swcache: true
+  - scope:
+      path: ""
+      type: authors
+    values:
+      layout: author
 
 sass:
   style: compressed
@@ -186,10 +194,12 @@ exclude:
   - package*.json
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [categories, tags, authors]
   layouts:
     category: category
     tag: tag
+    author: author
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+    author: /authors/:name/
