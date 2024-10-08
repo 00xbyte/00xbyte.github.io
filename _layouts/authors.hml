@@ -29,7 +29,7 @@ layout: norefactor
     {% for author in site.authors %}
       <a id="{{ author.username }}" href="{{ site.baseurl }}/authors/{{ author.username | slugify | url_encode }}">
         <div class="author-card">
-            <img src='https://github.com/{{ author.github_username }}.png?size=150' width="150" height="150" alt="{{ author.username }} profile picture" style="border-radius: 20%; object-fit: cover;" />
+            <img src='https://github.com/{{ author.github_username }}.png?size=130' width="130" height="130" alt="{{ author.username }} profile picture" style="border-radius: 20%; object-fit: cover;" />
             <div style="color: var(--text-color)">
               {{ author.username}}
             </div>
