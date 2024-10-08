@@ -1,7 +1,7 @@
 ---
-title: Unauthorized Smart Car Remote Access
+title: Hacking Smart Car Cams
 categories:
-- Reverse Engineering
+- Research
 tags:
 - IoT
 - Auth-Bypass
@@ -17,13 +17,14 @@ authors:
 As the entire world races torwards connectivity, time-to-market is often prioritized over security.  
 In today's episode - finding vulnerabilities in smart car appliences!
 
-> Improper authorization may lead to unauthorized access to smart car appliences (dash cams, car infotainment systems), granting access to location history, videos and more.
+If you recognize one of the logos in the picture above, you might be at risk! Improper authorization may lead to unauthorized access to smart car appliences (dash cams, car infotainment systems), granting access to location history, videos and more.
 
 ## Affected Vendors:
 - Szime
-- Proof.co.il
+- Proof.co.il (Fixed)
 
-After several attempts to contact both vendors (on multiple channels) with no reply, I am publishing the details of this vulnerability so that users can protect themselves from vehicle surveillance.
+After several attempts to contact both vendors (on multiple channels) for over a year, I am publishing the details of this vulnerability so that users can protect themselves from vehicle surveillance.  
+Proof.co.il have confirmed and fixed the issue, but Szime have not responded.
 
 
 # The vulnerability
@@ -63,7 +64,7 @@ Futhermore, the IMEI number is visible on some devices (like dash cams) and allo
 
 ![image 1]({{ 'assets/img/post/proof_imei.jpg' | relative_url }}){: width="540" height="400" }
 
-You will understand soon why this is a big issue.
+Because all of the IMEIs were already flashed on to the cameras, **unfortinately this issue can not be fixed!**  
 
 ## Issue #2 - 'Stealing' a binded camera
 We have established that once a camera is binded to a phone, only they have access to its features.  
@@ -89,8 +90,52 @@ POST /api/v2/user/binddev?access_token=xxxxxxxxx HTTP/1.1
 ```
 `name` being the phone number.
 
-Thats it! The device is now binded to their account and they have access to all of the deivce's recorded data!
+Thats it! The device is now binded to their account and they have access to all of the deivce's live and recorded data!
 
+### Backend Code (Guess)
+
+Although I have no way of knowing what code runs on the backend servers, this is my guess of how the code looks like if it is written in python with the flask framework:
+```py
+@app.route('/api/v2/user/debinddev', methods=['POST'])
+def debind_dev():
+    access_token = request.args.get('access_token')
+    imei = request.json.get('imei')
+
+    if not access_token or not imei:
+        return "Bad Args"
+
+    response = db.verify_access_token_valid(access_token)
+    if not response.is_ok:
+        return "Bad Token" 
+
+    db.debind_camera(imei)
+    return "OK"
+```
+
+### The Fix (Guess)
+This is what I assume the fix looks like:
+```py
+@app.route('/api/v2/user/debinddev', methods=['POST'])
+def debind_dev():
+    access_token = request.args.get('access_token')
+    imei = request.json.get('imei')
+
+    if not access_token or not imei:
+        return "Bad Args"
+
+    response = db.verify_access_token_valid(access_token)
+    if not response.is_ok:
+        return "Bad Token" 
+
+    # --------- FIX -----------
+    user = db.get_user_for_access_token(access_token)
+    if user.does_own_camera(imei):
+        return "Bad Permissions" 
+    # -------------------------
+
+    db.debind_camera(imei)
+    return "OK"
+```
 
 ## Bonus Issue - Registration without phone validation
 There is no validation the the registered phone number belongs to the user. No SMS, nothing.  
@@ -105,6 +150,6 @@ POST /api/v2/user/register HTTP/1.0
 
 
 # Mitigation
-Until the vendors fix this issue, I recommend that all users disconnect thier devices from the internet.
 
-Proof.co.il and Szime.com, if you are reading this, please fix this issue and please stop ghosting security researchers.
+I have received confirmation that Proof.co.il have fixed the issue on thier servers. On the other hand, Szime did not respond, so until they fix this issue, I recommend that Szime users disconnect thier devices from the internet.  
+Szime, if you are reading this, please stop ghosting security researchers.
