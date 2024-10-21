@@ -1,5 +1,5 @@
 ---
-title: Hacking Smart Car Cams
+title: Hacking Dash Cams
 categories:
 - Research
 tags:
@@ -56,8 +56,8 @@ GET /api/v2/user/sendbindreq?access_token=xxxxxxxxx&did=yyyyyyyyyyyyyy HTTP/1.1
 ```
 `did` is the device id - aka IMEI.
 
-This allows an attacker to brute-force their way to retreive all the existing IMEIs.
-Because the camera has no way to validate the binding phone is the correct one, then:  
+This allows an attacker to brute-force their way to retreive all the existing IMEIs.  
+Because the api has no way to validate whether the owner of the phone that binding to a new camera is also the owner of that camera, then:  
 **Any user can register to themselves any unregistered camera by guessing the IMEI**
 
 Futhermore, the IMEI number is visible on some devices (like dash cams) and allows pedestrians to look through the car window and obtain the IMEI number.
