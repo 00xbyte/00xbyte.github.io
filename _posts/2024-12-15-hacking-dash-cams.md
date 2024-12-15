@@ -1,5 +1,5 @@
 ---
-title: Hacking Dash Cams
+title: Hacking Car Cameras Through The Cloud
 categories:
 - Research
 tags:
@@ -11,6 +11,7 @@ tags:
 image: /assets/img/post/proof_logo.jpeg
 authors:
 - 00xbyte
+description: Hacking cars through the cloud to steal footage from YOUR car and even track your location! Critical vulnerability found in popular smart car apps. Learn how to protect yourself NOW.
 ---
 
 # Intro
@@ -23,11 +24,11 @@ If you recognize one of the logos in the picture above, you might be at risk! Im
 - Szime
 - Proof.co.il (Fixed)
 
-After several attempts to contact both vendors (on multiple channels) for over a year, I am publishing the details of this vulnerability so that users can protect themselves from vehicle surveillance.  
+I have discovered this vulnerability in November 2023, and after several attempts to contact both vendors (on multiple channels) for over a year, I am publishing the details of this vulnerability so that users can protect themselves from vehicle surveillance.  
 Proof.co.il have confirmed and fixed the issue, but Szime have not responded.
 
 
-# The vulnerability
+# The Vulnerability
 
 ## Intro to the system
 When a customer buys a new device, they download the associated app and register their appliance to the app with a unique identifier called `IMEI`. This process is called device binding. **Once a user binds a camera to their phone, they have full controll over it and can access all of its features, including location history and videos.**
@@ -129,7 +130,7 @@ def debind_dev():
 
     # --------- FIX -----------
     user = db.get_user_for_access_token(access_token)
-    if user.does_own_camera(imei):
+    if not user.does_own_camera(imei):
         return "Bad Permissions" 
     # -------------------------
 
