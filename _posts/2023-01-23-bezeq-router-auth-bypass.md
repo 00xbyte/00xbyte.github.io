@@ -1,5 +1,5 @@
 ---
-title: Bezeq Router Auth-Bypass
+title: Router Authentication Bypass - Bezeq 
 categories:
 - Research
 tags:
@@ -9,6 +9,7 @@ tags:
 image: /assets/img/post/router_login.jpeg
 authors:
 - 00xbyte
+description: A critical vulnerability (CVE-2022-47848) in Israel's most popular routers - Vtech NB603-IL and IAD604-IL. Login to any Vtech router, no username or password required! Bezeq routers are vulnerable to leaking critical information resulting in an authentication bypass.
 ---
 
 # Intro

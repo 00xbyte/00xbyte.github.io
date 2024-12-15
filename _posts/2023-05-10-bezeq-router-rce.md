@@ -1,5 +1,5 @@
 ---
-title: Bezeq Router RCE
+title: Hacking Israel's \#1 Router - Bezeq
 categories:
 - Research
 tags:
@@ -9,6 +9,7 @@ tags:
 - Backdoor
 authors:
 - 00xbyte
+description: A full chain of vulnerabilities to hack the most common router in Israel. I found a critical vulnerability chain with Authentication Bypass, Remote Code Execution by Command Injection, and a Backdoor on the router. If you're ready to take control of your network, buckle up and let's dive into the world of router hacking!
 ---
 
 # Intro

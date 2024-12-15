@@ -4,8 +4,9 @@ tags:
 - Process Injection
 - Python
 - Binary Exploitation
-category: 'Research'
+category: Research
 authors: ninpwn
+description: New method to inject arbitrary code into Linux processes, leveraging the /procfs filesystem to make haking linux systems easier than ever. This technique bypasses modern security mitigations like NX, Full RELRO, and ASLR. Learn how to exploit memory corruption vulnerabilities and understand the detailed process with a provided PoC. Ideal for security researchers, penetration testers, and malware analysts.
 ---
 
 # Prologue

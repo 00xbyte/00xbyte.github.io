@@ -7,6 +7,7 @@ tags:
 - Info-Leak
 authors:
 - 00xbyte
+description: KFC security breach! I found a security flaw that revealed customer credit card info. See how I did it and how you can stay safe. "Just curious..." turned into a kiosk vulnerability! My investigation uncovered a major flaw in KFC's self-service kiosks. Read all about it!
 ---
 
 One of the reasons I love being a security researcher is that the foolish and curious child in me never dies. I frequently ask myself what would happen if I did this and that.

@@ -1,11 +1,12 @@
 ---
-title: Physical Security
+title: Physical Penetration Testing
 categories:
 - Real World
 tags: []
 image: /assets/img/post/keypad.jpeg
 authors:
 - 00xbyte
+description: Physical penetration testing can be as important as digital penetration testing. Can you spot the security flaw? Learn about real-world examples of poor physical security and how they can be exploited.
 ---
 
 # Intro

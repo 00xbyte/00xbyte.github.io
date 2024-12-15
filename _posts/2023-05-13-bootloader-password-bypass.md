@@ -1,5 +1,5 @@
 ---
-title: Bypassing Router Bootloader Protection
+title: Hacking Router Bootloader
 categories:
 - Research
 tags:
@@ -8,6 +8,7 @@ tags:
 image: /assets/img/post/uart.jpg
 authors:
 - 00xbyte
+description: Hacking and bypassing bootloader password. Router firmware meets a security researcher, with an ISP's desperate attempt to implement security. Take contorl over your router and flash custom firmware!
 ---
 
 There is a saying that you don't truly own a router until you flash your own firmware on it.
