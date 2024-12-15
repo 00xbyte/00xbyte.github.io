@@ -1,5 +1,5 @@
 ---
-title: Hacking Israel's \#1 Router - Bezeq
+title: Hacking Israel's Best Selling Router - Bezeq
 categories:
 - Research
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Hacking Router Bootloader
+title: Hacking A Bootloader
 categories:
 - Research
 tags:
